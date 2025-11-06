@@ -1,0 +1,44 @@
+---
+globs: vite.config.ts,vite.config.js
+---
+
+# Vite Configuration Rules
+
+## Core Principles
+- **Fast Dev Server**: Optimize for development experience
+- **Production Build**: Optimize bundle size and performance
+- **TypeScript Support**: Ensure type checking works
+- **Plugin System**: Use official plugins when available
+
+## Key Settings
+- **plugins**: React Fast Refresh, SWC for speed
+- **server.host**: `0.0.0.0` for Docker/remote access
+- **server.port**: Consistent port (3000)
+- **build.outDir**: Output directory (`dist`)
+- **build.sourcemap**: Disable in production for security
+
+## Performance
+- Use `@vitejs/plugin-react-swc` for faster builds
+- Enable `build.minify: 'esbuild'` (default)
+- Configure `build.rollupOptions` for code splitting
+- Set `build.chunkSizeWarningLimit` if needed
+
+## Path Aliases
+```typescript
+resolve: {
+  alias: {
+    '@': path.resolve(__dirname, './src'),
+  },
+}
+```
+
+## Environment Variables
+- Prefix with `VITE_` to expose to client
+- Access via `import.meta.env.VITE_*`
+- Use `.env` files for different environments
+
+## Anti-Patterns
+- Don't manually configure what Vite handles (JSX, TS)
+- Avoid excessive build optimizations (diminishing returns)
+- Don't expose sensitive env vars to client
+- Avoid too many path aliases (reduces clarity)
