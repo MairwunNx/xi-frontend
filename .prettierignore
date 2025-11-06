@@ -1,0 +1,13 @@
+node_modules
+dist
+.git
+.github
+.vscode
+.devcontainer
+*.log
+coverage
+.cache
+public
+build
+.next
+out
