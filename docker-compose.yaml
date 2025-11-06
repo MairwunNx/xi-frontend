@@ -1,0 +1,30 @@
+---
+networks:
+  default:
+    driver: bridge
+services:
+  ximanager-frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ximanager-frontend
+    cpus: '0.5'
+    environment:
+      TZ: Europe/Moscow
+    healthcheck:
+      interval: 30s
+      retries: 3
+      start_period: 5s
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:80"]
+      timeout: 3s
+    logging:
+      driver: json-file
+      options:
+        max-file: '3'
+        max-size: 10m
+    mem_limit: 128m
+    mem_reservation: 64m
+    networks: [ default ]
+    ports:
+      - "3000:80"
+    restart: unless-stopped
