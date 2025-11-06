@@ -1,0 +1,41 @@
+---
+globs: *.html
+---
+
+# HTML Files Rules
+
+## Core Principles
+- **Semantic Markup**: Use appropriate HTML5 tags
+- **SEO Optimized**: Meta tags, Open Graph, Schema.org
+- **Performance**: Preload critical resources
+- **Accessibility**: ARIA labels, alt texts, semantic structure
+
+## SEO Essentials
+- **Title**: Descriptive, unique, 50-60 chars
+- **Description**: Compelling, 150-160 chars
+- **Keywords**: Relevant, comma-separated
+- **Canonical**: Specify canonical URL
+- **Robots**: Control indexing (index, follow)
+
+## Social Media Tags
+- **Open Graph**: Facebook, LinkedIn (og:*)
+- **Twitter Card**: Twitter-specific (twitter:*)
+- **Telegram**: Channel link (telegram:channel)
+
+## Performance
+- Preload critical fonts: `<link rel="preload" as="font">`
+- Defer non-critical scripts
+- Use modern image formats (WebP, AVIF)
+- Minimize inline styles/scripts
+
+## Accessibility
+- Set `lang` attribute on `<html>`
+- Use semantic tags: `<header>`, `<nav>`, `<main>`, `<footer>`
+- Include ARIA labels for dynamic content
+- Ensure proper heading hierarchy (h1 → h6)
+
+## Anti-Patterns
+- Don't put business logic in HTML
+- Avoid inline styles (use CSS/Tailwind)
+- Don't duplicate meta tags
+- Avoid excessive DOM nesting in root
