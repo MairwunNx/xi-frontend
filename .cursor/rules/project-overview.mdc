@@ -1,0 +1,59 @@
+---
+alwaysApply: true
+---
+
+# Xi Manager Frontend - Project Overview 🎨
+
+## Project Information
+- **Full Name**: Xi Manager Frontend
+- **Short Name**: ximanager-frontend
+- **Description**: Modern landing page for Xi Manager Telegram bot with comprehensive legal documentation for payment system compliance. Features pricing comparison, legal pages, and stylish design.
+
+## Technical Specifications
+- **React Version**: 18+
+- **TypeScript Version**: 5.5+
+- **Build Tool**: Vite 5.4+
+- **Package Manager**: Bun 1.0+ (or npm/yarn as fallback)
+- **Architecture**: React SPA with client-side routing
+
+## Technology Stack
+- **UI Library**: React 18 with TypeScript
+- **Build Tool**: Vite – fast dev server and bundler
+- **Styling**: Tailwind CSS – utility-first CSS framework
+- **Routing**: React Router 6 – declarative routing
+- **Animations**: Framer Motion – smooth transitions and animations
+- **Icons**: Lucide React – modern icon library
+- **Web Server**: Nginx Alpine – production-ready lightweight server
+- **Containerization**: Docker with multi-stage builds
+
+## Key Pages
+- **Home** (`/`) – Landing page with hero, features, pricing preview, stats
+- **Pricing** (`/pricing`) – Detailed tariff comparison (Bronze/Silver/Gold)
+- **Public Offer** (`/public-offer`) – Terms of service, payment terms, refund policy
+- **Privacy Policy** (`/privacy-policy`) – Data processing, user rights, security
+- **About** (`/about`) – Company info, legal details, support contacts
+
+## Core Components
+- **Header** – Navigation with links to main pages and bot
+- **Footer** – Legal info, company details, copyright, social links
+- **Pages** – Individual route components with content
+- **Layout** – Consistent page structure and styling
+
+## Key Entry Points
+- **Main Entry**: [src/main.tsx](mdc:src/main.tsx) – React app initialization
+- **App Component**: [src/App.tsx](mdc:src/App.tsx) – Router configuration
+- **Index HTML**: [index.html](mdc:index.html) – HTML template with SEO meta tags
+
+## Build Configuration
+- **Vite Config**: [vite.config.ts](mdc:vite.config.ts) – Build settings, plugins
+- **Tailwind Config**: [tailwind.config.js](mdc:tailwind.config.js) – Design system
+- **TypeScript Config**: [tsconfig.json](mdc:tsconfig.json) – Compiler options
+- **PostCSS Config**: [postcss.config.js](mdc:postcss.config.js) – CSS processing
+
+## Architectural Principles
+- **Component-Based**: Reusable UI components
+- **Type Safety**: Full TypeScript coverage
+- **Responsive Design**: Mobile-first approach with Tailwind
+- **SEO Optimized**: Meta tags, Schema.org, semantic HTML
+- **Performance**: Code splitting, lazy loading, optimized assets
+- **Accessibility**: Semantic markup, ARIA labels where needed
