@@ -1,0 +1,38 @@
+---
+globs: tailwind.config.js,tailwind.config.ts
+---
+
+# Tailwind Configuration Rules
+
+## Core Principles
+- **Design System**: Centralize colors, spacing, typography
+- **Content Paths**: Ensure all template files are scanned
+- **Extend, Don't Replace**: Preserve default utilities
+- **Theme Consistency**: Match project branding
+
+## Theme Extension
+- **Colors**: Define project color palette (primary, accent, etc.)
+- **Typography**: Custom font families and sizes
+- **Spacing**: Custom spacing scale if needed
+- **Animations**: Project-specific animations
+
+## Content Configuration
+- Include all files containing class names
+- Use glob patterns for efficiency
+- Don't forget HTML files and dynamic components
+
+## Custom Utilities
+- Use `@layer utilities` in CSS for simple additions
+- Use plugins for complex custom utilities
+- Document non-obvious utility purposes
+
+## Performance
+- Minimize content paths scope for faster builds
+- Use `safelist` sparingly (increases bundle size)
+- Avoid excessive theme customization
+
+## Anti-Patterns
+- Don't replace default theme (use `extend`)
+- Avoid inline colors/values; use theme tokens
+- Don't add unused utilities to safelist
+- Avoid deeply nested theme values
