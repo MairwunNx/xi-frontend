@@ -1,0 +1,35 @@
+---
+globs: package.json
+---
+
+# Package.json Rules
+
+## Core Principles
+- **Version Lock**: Use exact versions for stability
+- **Clean Scripts**: Descriptive, single-purpose scripts
+- **Minimal Dependencies**: Only what's necessary
+- **Type Safety**: Include @types/* for all dependencies
+
+## Dependencies
+- **Production**: Only runtime dependencies
+- **Development**: Build tools, linters, type definitions
+- Use `^` for minor updates, exact versions for critical deps
+- Keep dependencies up-to-date with Dependabot
+
+## Scripts
+- `dev` — Development server
+- `build` — Production build (TypeScript check + Vite build)
+- `preview` — Preview production build
+- `lint` — Run ESLint
+- Keep scripts simple; complex logic → separate files
+
+## Versioning
+- Follow SemVER: `MAJOR.MINOR.PATCH`
+- Match version in `.version` file
+- Update version in commits affecting public API
+
+## Anti-Patterns
+- Don't mix production and dev dependencies
+- Avoid unused dependencies (run `depcheck`)
+- Don't commit `package-lock.json` (using Bun)
+- Avoid wildcard versions (`*`) for stability
