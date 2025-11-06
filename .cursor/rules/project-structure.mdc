@@ -1,0 +1,137 @@
+---
+alwaysApply: true
+---
+
+# Xi Manager Frontend - Project Structure 📁
+
+## Root Structure
+
+### Main Files
+- **Entry Point**: [src/main.tsx](mdc:src/main.tsx) – React app initialization and rendering
+- **App Component**: [src/App.tsx](mdc:src/App.tsx) – Router setup and route definitions
+- **HTML Template**: [index.html](mdc:index.html) – Main HTML file with SEO meta tags
+- **Global Styles**: [src/index.css](mdc:src/index.css) – Tailwind imports and global styles
+
+### Configuration Files
+- **Build**: [vite.config.ts](mdc:vite.config.ts) – Vite bundler configuration
+- **Styling**: [tailwind.config.js](mdc:tailwind.config.js) – Tailwind design tokens
+- **PostCSS**: [postcss.config.js](mdc:postcss.config.js) – CSS processing pipeline
+- **TypeScript**: [tsconfig.json](mdc:tsconfig.json) – TS compiler options
+- **Package**: [package.json](mdc:package.json) – Dependencies and scripts
+- **Linting**: [.eslintrc.cjs](mdc:.eslintrc.cjs) – ESLint rules
+
+### Docker & Deployment
+- **Dockerfile**: [Dockerfile](mdc:Dockerfile) – Multi-stage build with Nginx
+- **Production**: [docker-compose.yaml](mdc:docker-compose.yaml) – Production setup
+- **Development**: [docker-compose.dev.yaml](mdc:docker-compose.dev.yaml) – Dev environment
+
+## Source Structure (`src/`)
+
+### Components (`src/components/`)
+- **Purpose**: Reusable UI components used across multiple pages
+- **Key Files**:
+  - [Header.tsx](mdc:src/components/Header.tsx) – Navigation bar with links
+  - [Footer.tsx](mdc:src/components/Footer.tsx) – Site footer with legal info and company details
+
+### Pages (`src/pages/`)
+- **Purpose**: Route components for each page of the website
+- **Structure**:
+  - [Home.tsx](mdc:src/pages/Home.tsx) – Landing page with hero, features, pricing preview, CTA
+  - [Pricing.tsx](mdc:src/pages/Pricing.tsx) – Detailed tariff comparison with feature matrix
+  - [PublicOffer.tsx](mdc:src/pages/PublicOffer.tsx) – Terms of service, payment terms, legal clauses
+  - [PrivacyPolicy.tsx](mdc:src/pages/PrivacyPolicy.tsx) – Data processing, user rights, GDPR compliance
+  - [About.tsx](mdc:src/pages/About.tsx) – Company information, legal details, support contacts
+
+## Design System
+
+### Tailwind Configuration
+- **Colors**: Dark theme with orange accent (`primary-500`)
+- **Typography**: Inter font family with responsive sizes
+- **Spacing**: Consistent spacing scale
+- **Breakpoints**: Mobile-first responsive design
+- **Animations**: Custom animations for smooth transitions
+
+### Component Patterns
+- **Cards**: Elevated containers with borders and shadows
+- **Buttons**: Primary, secondary, and outline variants
+- **Gradients**: Background gradients for visual interest
+- **Icons**: Lucide React icons for consistent iconography
+
+## Legal Pages Structure
+
+### Public Offer
+- Terms and definitions
+- Service description
+- Pricing and payment terms
+- Service delivery process
+- Rights and obligations
+- Refund policy
+- Liability limitations
+- Dispute resolution
+- Company details
+
+### Privacy Policy
+- Data collection scope
+- Processing purposes
+- Legal basis for processing
+- Data storage and security
+- Third-party data sharing
+- User rights (access, deletion, etc.)
+- Contact information
+
+### About Page
+- Service description
+- Company information (ИП details)
+- Legal documentation links
+- Support information
+- Contact details
+
+## Static Assets (`public/`)
+- **Purpose**: Static files served directly
+- **Contents**: Favicons, images, fonts (if any)
+
+## Configuration Structure
+
+### Development
+- Hot module replacement
+- Source maps
+- Fast refresh
+- Dev server on port 3000
+
+### Production
+- Minified bundles
+- Code splitting
+- Asset optimization
+- Gzip compression (Nginx)
+- Cache headers (Nginx)
+
+## Nginx Configuration (`nginx.conf`)
+- **Purpose**: Production web server configuration
+- **Features**:
+  - SPA routing support (fallback to index.html)
+  - Gzip compression
+  - Static asset caching
+  - Security headers
+  - Health check endpoint
+
+## CI/CD Structure (`.github/`)
+
+### Workflows (`workflows/`)
+- **build.yml** – Build, push to GHCR, create releases
+- **lint.yml** – ESLint and TypeScript checks
+
+### Dependabot
+- **dependabot.yml** – Automated dependency updates for npm, Docker, GitHub Actions
+
+## Dev Container (`.devcontainer/`)
+- **Purpose**: VS Code development container configuration
+- **Features**: Pre-configured Node.js, Bun, extensions, port forwarding
+
+## Architectural Principles
+- **Component Modularity**: Each component has single responsibility
+- **Type Safety**: Full TypeScript coverage for compile-time safety
+- **Responsive First**: Mobile-first design with progressive enhancement
+- **SEO Optimization**: Meta tags, structured data, semantic HTML
+- **Performance**: Lazy loading, code splitting, optimized assets
+- **Accessibility**: Semantic HTML, proper heading hierarchy, ARIA when needed
+- **Legal Compliance**: Complete legal documentation for payment processing
