@@ -1,0 +1,29 @@
+---
+globs: nginx.conf,*.nginx
+---
+
+# Nginx Configuration Rules
+
+## Core Principles
+- **Security First**: Disable server tokens, set headers
+- **SPA Support**: Route all requests to index.html
+- **Performance**: Enable gzip, set cache headers
+- **Non-Root**: Run as unprivileged user
+
+## Security Headers
+- `X-Content-Type-Options: nosniff`
+- `X-Frame-Options: DENY`
+- `X-XSS-Protection: 1; mode=block`
+- `Referrer-Policy: no-referrer-when-downgrade`
+
+## Performance Tips
+- Enable gzip compression for text files
+- Set appropriate cache headers for static assets
+- Use `sendfile on` for better file serving
+- Configure `keepalive_timeout` (default: 65s)
+
+## Anti-Patterns
+- Don't run as root user
+- Avoid hardcoded paths; use variables
+- Don't expose server version
+- Avoid overly permissive CORS headers
