@@ -1,0 +1,43 @@
+---
+globs: *.css,*.scss,*.sass,*.less,*.styl
+---
+
+# CSS Files Rules
+
+## Core Principles
+- **Tailwind First**: Use Tailwind utility classes; custom CSS only when necessary
+- **Mobile First**: Start with mobile styles, use breakpoints for larger screens
+- **Consistency**: Follow existing naming and structure patterns
+
+## File Structure
+- **Global Styles** (`index.css`): Tailwind imports, CSS variables, global resets
+- **Component Styles**: Avoid; use Tailwind utilities in JSX instead
+
+## Tailwind Guidelines
+- Use existing design tokens from `tailwind.config.js`
+- Prefer utility classes over custom CSS
+- Use `@apply` sparingly; prefer inline utilities
+- Group utilities logically: layout → spacing → colors → typography
+
+## Custom CSS (when needed)
+- Use CSS custom properties for dynamic values
+- Follow BEM naming: `block__element--modifier`
+- Scope styles to components to avoid conflicts
+- Document complex selectors and animations
+
+## Performance
+- Avoid deep nesting (max 3 levels)
+- Keep selectors simple and specific
+- Use shorthand properties where possible
+- Minimize use of `!important`
+
+## Animations
+- Define custom animations in `tailwind.config.js`
+- Use Framer Motion for complex animations
+- Keep CSS animations for simple transitions
+
+## Anti-Patterns
+- Don't override Tailwind utilities with custom CSS
+- Avoid inline `style` props; use Tailwind classes
+- Don't duplicate styles; extract to Tailwind config if reused
+- Avoid global styles that affect multiple components
