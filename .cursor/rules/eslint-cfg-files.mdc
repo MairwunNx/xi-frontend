@@ -1,0 +1,26 @@
+---
+globs: .eslintrc.cjs,.eslintrc.js,.eslintrc.json
+---
+
+# ESLint Configuration Rules
+
+## Core Principles
+- **Strict Mode**: Enforce code quality and consistency
+- **React/TypeScript Focus**: Configure for React 18 + TypeScript
+- **Auto-Fix**: Enable fixable rules for better DX
+
+## Key Rules
+- **react-refresh/only-export-components**: Warn (enable Fast Refresh)
+- **@typescript-eslint/no-unused-vars**: Error with args exception
+- **react-hooks/exhaustive-deps**: Warn (enforce dependency arrays)
+
+## Best Practices
+- Use `warn` for style issues, `error` for bugs
+- Override base rules only when necessary
+- Document non-obvious rule configurations
+- Keep rules consistent with Prettier
+
+## Anti-Patterns
+- Don't disable TypeScript strict checks globally
+- Avoid too many rule overrides (signals architectural issues)
+- Don't use `eslint-disable` comments excessively
