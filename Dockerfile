@@ -5,7 +5,7 @@ RUN bun install --frozen-lockfile
 COPY . .
 RUN bun run build
 
-FROM nginx:1.27-alpine
+FROM nginx:1.29-alpine
 WORKDIR /usr/share/nginx/html
 RUN adduser -D -s /bin/sh -u 1000 ximanager && \
     chown -R ximanager:ximanager /usr/share/nginx/html && \
