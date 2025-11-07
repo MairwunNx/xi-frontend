@@ -10,7 +10,7 @@ on:
       - '*.js'
       - '*.jsx'
       - 'package.json'
-      - '.eslintrc.cjs'
+      - 'eslint.config.js'
   push:
     branches: [ master, main ]
     paths:
