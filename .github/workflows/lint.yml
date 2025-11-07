@@ -41,7 +41,12 @@ jobs:
           bun-version: latest
 
       - name: Install dependencies
-        run: bun install --frozen-lockfile
+        run: |
+          if [ "${{ github.event_name }}" == "push" ]; then
+            bun install --frozen-lockfile
+          else
+            bun install
+          fi
 
       - name: Run ESLint
         run: bun run lint
@@ -59,7 +64,12 @@ jobs:
           bun-version: latest
 
       - name: Install dependencies
-        run: bun install --frozen-lockfile
+        run: |
+          if [ "${{ github.event_name }}" == "push" ]; then
+            bun install --frozen-lockfile
+          else
+            bun install
+          fi
 
       - name: Check TypeScript
         run: bunx tsc --noEmit
