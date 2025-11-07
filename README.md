@@ -1,8 +1,8 @@
 # 🎨 Xi Manager Frontend
 
-[![AI Capable](https://img.shields.io/badge/AI-Capable-brightgreen?style=flat&logo=openai&logoColor=white)](https://github.com/mairwunnx/ximanager-frontend)
-[![Docker](https://img.shields.io/badge/Docker-Available-2496ED?style=flat&logo=docker&logoColor=white)](https://github.com/mairwunnx/ximanager-frontend/pkgs/container/ximanager-frontend)
-[![GitHub Release](https://img.shields.io/github/v/release/mairwunnx/ximanager-frontend?style=flat&logo=github&color=blue)](https://github.com/mairwunnx/ximanager-frontend/releases)
+[![AI Capable](https://img.shields.io/badge/AI-Capable-brightgreen?style=flat&logo=openai&logoColor=white)](https://github.com/mairwunnx/xi-frontend)
+[![Docker](https://img.shields.io/badge/Docker-Available-2496ED?style=flat&logo=docker&logoColor=white)](https://github.com/mairwunnx/xi-frontend/pkgs/container/xi-frontend)
+[![GitHub Release](https://img.shields.io/github/v/release/mairwunnx/xi-frontend?style=flat&logo=github&color=blue)](https://github.com/mairwunnx/xi-frontend/releases)
 [![React](https://img.shields.io/badge/React-18-61DAFB?style=flat&logo=react&logoColor=white)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.5-3178C6?style=flat&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Bun](https://img.shields.io/badge/Bun-1.0-FBF0DF?style=flat&logo=bun&logoColor=black)](https://bun.sh/)
