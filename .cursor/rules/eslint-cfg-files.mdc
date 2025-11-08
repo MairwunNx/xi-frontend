@@ -1,5 +1,5 @@
 ---
-globs: .eslintrc.cjs,.eslintrc.js,.eslintrc.json
+globs: .eslintrc.cjs,.eslintrc.js,.eslintrc.json,eslint.config.js
 ---
 
 # ESLint Configuration Rules

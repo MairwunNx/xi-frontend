@@ -1,5 +1,5 @@
 ---
-globs: tailwind.config.js,tailwind.config.ts
+globs: tailwind.config.js,tailwind.config.ts,index.css
 ---
 
 # Tailwind Configuration Rules
