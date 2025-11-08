@@ -3,10 +3,10 @@
 [![AI Capable](https://img.shields.io/badge/AI-Capable-brightgreen?style=flat&logo=openai&logoColor=white)](https://github.com/mairwunnx/xi-frontend)
 [![Docker](https://img.shields.io/badge/Docker-Available-2496ED?style=flat&logo=docker&logoColor=white)](https://github.com/mairwunnx/xi-frontend/pkgs/container/xi-frontend)
 [![GitHub Release](https://img.shields.io/github/v/release/mairwunnx/xi-frontend?style=flat&logo=github&color=blue)](https://github.com/mairwunnx/xi-frontend/releases)
-[![React](https://img.shields.io/badge/React-18-61DAFB?style=flat&logo=react&logoColor=white)](https://react.dev/)
+[![React](https://img.shields.io/badge/React-19-61DAFB?style=flat&logo=react&logoColor=white)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.5-3178C6?style=flat&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Bun](https://img.shields.io/badge/Bun-1.0-FBF0DF?style=flat&logo=bun&logoColor=black)](https://bun.sh/)
-[![Vite](https://img.shields.io/badge/Vite-5.4-646CFF?style=flat&logo=vite&logoColor=white)](https://vitejs.dev/)
+[![Vite](https://img.shields.io/badge/Vite-7.2-646CFF?style=flat&logo=vite&logoColor=white)](https://vitejs.dev/)
 
 **Язык**: 🇷🇺 Русский
 
@@ -81,7 +81,7 @@ docker compose logs -f ximanager-frontend
 ```yaml
 services:
   ximanager-frontend:
-    image: ghcr.io/mairwunnx/ximanager-frontend:1.0.0
+    image: ghcr.io/mairwunnx/ximanager-frontend:1.0.1
     container_name: ximanager-frontend
     ports:
       - "3000:80"
