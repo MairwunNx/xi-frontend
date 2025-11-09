@@ -84,7 +84,7 @@ services:
     image: ghcr.io/mairwunnx/ximanager-frontend:1.0.1
     container_name: ximanager-frontend
     ports:
-      - "3000:80"
+      - "3000:8080"
     restart: unless-stopped
 ```
 
